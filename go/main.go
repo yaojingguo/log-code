@@ -10,7 +10,8 @@ func main() {
 	ac.AddLogTag("name", "yaojingguo")
 	ctx := ac.AnnotateCtx(context.Background())
 	log.Dev.Info(ctx, "prepare to repel boarders")
-	// log.Ops.Info(ctx, "prepare to repel boarders")
+	log.Dev.Info(ctx, "a info message")
+	log.VEventf(ctx, 0, "client error: %s", "illegal state")
 	// log.Dev.Fatal(ctx, "initialization failed")
 	// log.Dev.Infof(ctx, "client error: %s")
 }
